@@ -1,8 +1,8 @@
 {
-  "name": "angular-intercom",
-  "version": "2.1.1",
+  "name": "@tamvm/angular-intercom",
+  "version": "2.1.2",
   "main": "angular-intercom.js",
-  "description": "An Angular.js wrapper for Intercom.io",
+  "description": "An Angular.js wrapper for Intercom.io (forked - support api_base)",
   "bugs": "https://github.com/gdi2290/angular-intercom/issues",
   "keywords": [
     "angular",
@@ -19,8 +19,7 @@
   ],
   "author": {
     "name": "Patrick Stapleton",
-    "email": "github@gdi2290.com",
-    "url": "www.gdi2290.com"
+    "email": "github@gdi2290.com"
   },
   "ignore": [
     ".bowerrc",

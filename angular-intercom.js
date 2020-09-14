@@ -74,6 +74,7 @@
     'asyncLoading': false,
     'scriptUrl': 'https://widget.intercom.io/widget/',// <INSERT APP_ID HERE>
     'appID': '',
+    'apiBase': '',
     'development': false
   };
 
@@ -103,6 +104,9 @@
         if (config.appID) {
           _options.app_id = _options.app_id || config.appID;
         }
+        if (config.apiBase) {
+          _options.api_base = _options.apiBase || config.apiBase;
+        }
         angular.extend(_options, IntercomSettings);
       };
 
@@ -129,8 +133,14 @@
           if (!_options.app_id && config.appID) {
             _options.app_id = config.appID;
           }
+          if (!_options.api_base && config.apiBase) {
+            _options.api_base = config.apiBase;
+          }
           if (options.app_id && options.app_id !== _options.app_id) {
             _options.app_id = options.app_id;
+          }
+          if (options.api_base && options.api_base !== _options.api_base) {
+            _options.api_base = options.api_base;
           }
           global.Intercom('boot', _options);
           return $intercom;
@@ -139,6 +149,9 @@
           if (data) {
             if (!data.app_id && config.appID) {
               data.app_id = config.appID;
+            }
+            if (!data.api_base && config.apiBase) {
+              data.api_base = config.apiBase;
             }
             if (data.app_id && data.app_id !== config.app_id) {
               config.app_id = data.app_id;
