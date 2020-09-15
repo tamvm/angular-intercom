@@ -105,7 +105,7 @@
           _options.app_id = _options.app_id || config.appID;
         }
         if (config.apiBase) {
-          _options.api_base = _options.apiBase || config.apiBase;
+          _options.api_base = _options.api_base || config.apiBase;
         }
         angular.extend(_options, IntercomSettings);
       };
@@ -155,6 +155,9 @@
             }
             if (data.app_id && data.app_id !== config.app_id) {
               config.app_id = data.app_id;
+            }
+            if (data.api_base && data.api_base !== config.api_base) {
+              config.api_base = data.api_base;
             }
             global.Intercom('update', data);
           } else {
