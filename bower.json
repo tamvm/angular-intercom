@@ -1,6 +1,6 @@
 {
   "name": "@tamvm/angular-intercom",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "main": "angular-intercom.js",
   "description": "An Angular.js wrapper for Intercom.io (forked - support api_base)",
   "bugs": "https://github.com/gdi2290/angular-intercom/issues",
