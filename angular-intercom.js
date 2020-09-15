@@ -107,6 +107,7 @@
         if (config.apiBase) {
           _options.api_base = _options.api_base || config.apiBase;
         }
+        window.intercomSettings = _options;
         angular.extend(_options, IntercomSettings);
       };
 
@@ -159,6 +160,7 @@
             if (data.api_base && data.api_base !== config.api_base) {
               config.api_base = data.api_base;
             }
+            window.intercomSettings = data;
             global.Intercom('update', data);
           } else {
             global.Intercom('update');
